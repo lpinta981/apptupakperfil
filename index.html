@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tupak Rantina App</title>
-  <link rel="manifest" href="/apptupakperfil/manifest.json">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#001749">
+  <link rel="apple-touch-icon" href="icon-192x192.png">
   <style>
     body, html {
       margin: 0;
@@ -23,12 +25,14 @@
   <iframe src="https://script.google.com/macros/s/AKfycbyIgQdFcyqLbOTR0r9i4izY3g6CHPCVPLz0M8ePLUV-v2YarXVfJNcKLS3XA0O1gTLh/exec" frameborder="0"></iframe>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/apptupakperfil/service-worker.js')
-      .then(registration => {
-        console.log('Service Worker registrado con éxito:', registration);
-      })
-      .catch(error => {
-        console.log('Fallo en el registro del Service Worker:', error);
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registrado con éxito:', registration);
+          })
+          .catch(error => {
+            console.log('Fallo en el registro del Service Worker:', error);
+          });
       });
     }
   </script>
