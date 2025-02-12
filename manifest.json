@@ -1,20 +1,25 @@
 {
-  "short_name": "Tupak Rantina App",
+  "short_name": "Tupak Rantina",
   "name": "Tupak Rantina App",
   "icons": [
     {
-      "src": "https://i.postimg.cc/zBPmbxNT/TRANSPARENTE-min.png",
+      "src": "icon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "https://i.postimg.cc/zBPmbxNT/TRANSPARENTE-min.png",
+      "src": "icon-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
-  "start_url": "/apptupakperfil/index.html",
+  "start_url": "./index.html",
+  "scope": ".",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#f5f5f5",
-  "theme_color": "#001749"
+  "theme_color": "#001749",
+  "description": "Tupak Rantina Application"
 }
